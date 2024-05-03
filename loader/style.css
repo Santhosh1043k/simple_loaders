@@ -1,0 +1,84 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+.loader1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+.loader1 > div {
+    border: 5px solid orange;
+    height: 4rem;
+    width: 4rem;
+    border-top: 5px solid wheat;
+    border-radius: 50%;
+    animation: spinner1 1s linear infinite;
+    
+}
+@keyframes spinner1{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.loader2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+.loader2 > div {
+    border: 5px solid orange;
+    height: 4rem;
+    width: 4rem;
+    border-top: 5px solid wheat;
+    border-bottom: 5px solid wheat;
+    border-radius: 50%;
+    animation: spinner1 1s linear infinite;
+    animation-direction: alternate;
+    
+}
+.loader3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: 5rem;
+}
+.loader3 div{
+    background-color: turquoise;
+    height: 100px;
+    width: 30px;
+}
+.space{
+    height: 70px;
+}
+@keyframes expander{
+    0%{
+        height: 100px;
+    }
+    50%{
+        height: 130px;
+    }
+    100%{
+        height: 100px;
+    }
+}
+.loader3 .first{
+    animation: expander 0.8s linear infinite;
+    animation-delay: 0.3s;
+}
+.loader3 .second{
+    animation: expander 0.8s linear infinite;
+    animation-delay: 0.7s;
+}
+.loader3 .last{
+    animation: expander 0.8s linear infinite;
+    animation-delay: 0s;
+}
